@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+<!--etiquetas siempre usando minusculas por convención-->
+<h4>Cálculo diferencia de edades en HTML</h4>
+<!--<br><br>-->
+
+
+<h4>Cálculo diferencia de edades en JavaScpript</h4>
+<!--<br><br>-->
+<script>
+		function saltarLinea(argument) {
+
+			document.write("<br>");
+			document.write("<br>");
+			document.write("<br>");
+
+		}
+		function imprimir(frase) {//recibira la funcion "imprimir" una variable "frase"
+
+			document.write(frase);
+			saltarLinea();
+
+		}
+		//document.write("hola amigos");
+		//document.write("<br>");
+		//document.write("<br>");
+		//document.write("<br>");
+		var hermano = 30;
+		var hermana = 37;
+		var yo = 34;
+
+		imprimir("Mi hermano tiene: "+ hermano + " y yo tengo: "+ yo + ", por lo que la diferencia seria de: " + ((hermano - yo)*-1) + "años");
+		imprimir("Mi hermana tiene: "+ hermana + " y yo tengo: "+ yo + ", por lo que la diferencia seria de: " + ((hermana - yo)) + "años");
+
+</script>
