@@ -1,0 +1,49 @@
+<meta charset="UTF-8">
+<!--etiquetas siempre usando minusculas por convención-->
+<h4>en HTML</h4>
+<!--<br><br>-->
+Juan nació en el año: 2002<br>
+Pedro nació en el año: 1997<br>
+Carlos nació en el año: 2007<br>
+Jimena nació en el año: 2010 años<br>
+Paola nació en el año: 1995 años<br>
+Laura nació en el año: 2005 años
+
+<h4>en JavaScpript</h4>
+<!--<br><br>-->
+<script>
+		function saltarLinea(argument) {
+
+			document.write("<br>");
+			document.write("<br>");
+			document.write("<br>");
+
+		}
+		function imprimir(frase) {//recibira la funcion "imprimir" una variable "frase"
+
+			document.write(frase);// entonces luego el codigo es leido dando como parametros de entrada el llamamiento de la funcion es decir como en el siguiente ejemplo "imprimir("hola amigos");" 
+			saltarLinea();//devolvera en texto estatico "hola amigos" seguido de 3 saltos de linea
+
+		}
+		//document.write("hola amigos");
+		//document.write("<br>");
+		//document.write("<br>");
+		//document.write("<br>");
+		var anho = 2025;
+		imprimir("hola amigos");//en este caso estariamos sustituyendo document.write(); por una funcion que se llama imprimir, dandonos el mismo resultado que seria el texto de "hola amigos"
+		//saltarLinea();//en este caso estariamos sustituyendo document.write(); por una funcion que se llama saltarLinea, dandonos el mismo resultado que sera hacer 3 saltos de linea
+		imprimir("Juan tiene: "+(anho-2002)+" años");
+		//saltarLinea();		
+		imprimir("Pedro tiene: "+(anho-1997)+" años");
+		//saltarLinea();		
+		anho = 2030;
+		imprimir("Carlos tiene: "+(anho-2007)+" años");
+		//saltarLinea();			
+		imprimir("Jimena tiene: "+(anho-2010)+" años");
+		//saltarLinea();		
+		imprimir("Paola tiene: "+(anho-1995)+" años");
+		//saltarLinea();		
+		imprimir("Laura tiene: "+(anho-2005)+" años");
+		//saltarLinea();		
+
+</script>
