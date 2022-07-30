@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+<!--etiquetas siempre usando minusculas por convención-->
+<h4>en HTML</h4>
+<!--<br><br>-->
+Juan nació en el año: 2002
+<br>
+Pedro nació en el año: 1997
+<br>
+Carlos nació en el año: 2007
+
+<h4>en JavaScpript</h4>
+<!--<br><br>-->
+<script>
+		
+		var anho = 2025;//declaramos una variable de nombre "anho"
+		//declarar variables siempre usando minusculas por convención
+		document.write("Juan tiene: "+(anho-2002)+" años");
+		document.write("<br>");
+		document.write("Pedro tiene: "+(anho-1997)+" años");
+		document.write("<br>");
+		anho = 2030;
+		document.write("Carlos tiene: "+(anho-2007)+" años");
+		document.write("<br><br>");
+		anho = 2022;
+		document.write("Jimena tiene: "+(anho-2010)+" años");
+		document.write("<br>");
+		document.write("Paola tiene: "+(anho-1995)+" años");
+		document.write("<br>");
+		document.write("Laura tiene: "+(anho-2005)+" años");
+		document.write("<br><br>");
+		promedio=((12+27+17)/3);
+		document.write("el promedio de las edades de las tres mujeres es: "+(promedio)+" años"+" y redondeado serian "+Math.round(promedio)+" años");//la funcion "Math.round()" redondea al superior proximo de una operacion aritmetica
+		document.write("<br><br>");
+		//por convencion inicia la primer palabra como minuscula y las siguientes palabras pondremos la primera letra como mayuscula
+		var edadJimena=12;
+		var edadPaola=27;
+		var edadLaura=17;
+		var nombre1 = "Jimena";
+		var nombre2 = "Paola";
+		var nombre3 = "Laura";
+		promedio=((edadJimena+edadPaola+edadLaura)/3);
+		document.write("el promedio de las edades de "+nombre1+", "+nombre2+" y "+nombre3+" es: "+(promedio)+" años"+" y redondeado serian "+Math.round(promedio)+" años");
+
+</script>
