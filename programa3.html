@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+<!--etiquetas siempre usando minusculas por convención-->
+<h4>en HTML</h4>
+<!--<br><br>-->
+Juan nació en el año: 2002<br>
+Pedro nació en el año: 1997<br>
+Carlos nació en el año: 2007
+
+<h4>en JavaScpript</h4>
+<!--<br><br>-->
+<script>
+		function saltarLinea(argument) {
+
+			document.write("<br>");//agregando una función para hacer los saltos de linea (tercera forma de hacerlo)
+			//agregando mas "document.write("<br>");" dentro de la funcion estariamos en este caso agregando mas de un salto, cuando la funcion es llamada 
+
+		}
+		var anho = 2025;//declaramos una variable de nombre "anho"
+		//declarar variables siempre usando minusculas por convención
+		var saltoLinea1 ="<br>";
+		var saltoLinea2 ="<br><br>";//agregando mas de un "<br>" para hacer los saltos de linea(primera forma de hacerlo)
+		document.write("Juan tiene: "+(anho-2002)+" años");
+		saltarLinea();		
+		document.write("Pedro tiene: "+(anho-1997)+" años");
+		document.write(saltoLinea1);
+		anho = 2030;
+		document.write("Carlos tiene: "+(anho-2007)+" años");
+		document.write(saltoLinea2);	
+		document.write("Jimena tiene: "+(anho-2010)+" años");
+		document.write(saltoLinea1);
+		document.write("Paola tiene: "+(anho-1995)+" años");
+		saltarLinea();		
+		document.write("Laura tiene: "+(anho-2005)+" años");
+		document.write(saltoLinea1+saltoLinea1);//agregando mas de un "saltoLinea1" para hacer mas de un salto de linea (segunda forma de hacerlo)
+
+</script>
