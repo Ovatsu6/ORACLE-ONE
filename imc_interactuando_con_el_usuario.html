@@ -15,9 +15,9 @@
 		}
 		document.write('<hr>Cálculo de promedio imc de DOS personas usando "return" dentro de una ecuacion simplificada :</hr><br>');
 		document.write("<hr><b></b></hr><br>");
-		nombreInformado=prompt("informe su nombre: ");
-		pesoInformado=prompt(nombreInformado+" informe su peso: ");
-		alturaInformada=prompt(nombreInformado+" informe su altura: ");
+		var nombreInformado=prompt("informe su nombre: ");//puede ser declarada la variable usando la palabra reservada "var" 
+		pesoInformado=prompt(nombreInformado+" informe su peso: ");//como támbien asignar de forma directa el valor a la variable
+		alturaInformada=prompt(nombreInformado+" informe su altura: ");//como támbien asignar de forma directa el valor a la variable
 		imcCalculado=calcularIMC(pesoInformado,alturaInformada);
 		imprimir("Cálculo de imc de "+nombreInformado+" es: "+imcCalculado);		
 </script>
