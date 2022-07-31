@@ -1,0 +1,23 @@
+<meta charset="UTF-8">
+<h4>Cálculo de Indice de Masa Muscular</h4>
+<script>
+		function saltarLinea(argument) {
+			document.write("<br>");
+			document.write("<br>");
+			document.write("<br>");
+		}
+		function imprimir(frase) {//recibira la funcion "imprimir" una variable "frase"
+			document.write(frase);// entonces luego el codigo es leido dando como parametros de entrada el llamamiento de la funcion es decir como en el siguiente ejemplo "imprimir("hola amigos");" 
+			saltarLinea();//devolvera en texto estatico "hola amigos" seguido de 3 saltos de linea
+		}		
+		function calcularIMC(peso,altura){
+			return (peso/(Math.pow(altura,2)));//formula java Script de potencia(Math.pow(variable,exponente) return; retorna los valores captados	
+		}
+		document.write('<hr>Cálculo de promedio imc de DOS personas usando "return" dentro de una ecuacion simplificada :</hr><br>');
+		document.write("<hr><b></b></hr><br>");
+		nombreInformado=prompt("informe su nombre: ");
+		pesoInformado=prompt(nombreInformado+" informe su peso: ");
+		alturaInformada=prompt(nombreInformado+" informe su altura: ");
+		imcCalculado=calcularIMC(pesoInformado,alturaInformada);
+		imprimir("Cálculo de imc de "+nombreInformado+" es: "+imcCalculado);		
+</script>
