@@ -1,0 +1,41 @@
+<meta charset="UTF-8">
+<h4>Cálculo de Indice de Masa Muscular</h4>
+<script>
+		function saltarLinea(argument) {
+			document.write("<br>");
+			document.write("<br>");
+			document.write("<br>");
+		}
+		function imprimir(frase) {//recibira la funcion "imprimir" una variable "frase"
+			document.write(frase);// entonces luego el codigo es leido dando como parametros de entrada el llamamiento de la funcion es decir como en el siguiente ejemplo "imprimir("hola amigos");" 
+			saltarLinea();//devolvera en texto estatico "hola amigos" seguido de 3 saltos de linea
+		}
+		
+		function calcularIMC(peso1,altura1,nombre1,peso2,altura2,nombre2){
+			imc1=peso1/(Math.pow(altura1,2));//formula java Script de potencia(Math.pow(variable,exponente)
+			imc2=peso2/(Math.pow(altura2,2));//formula java Script de potencia(Math.pow(variable,exponente)
+			imc=((imc1+imc2)/2);
+			document.write("<hr>Cálculo de promedio de imc de dos personas :</hr><br>");//etiqueta <hr></hr> genera una linea en la pagina
+			document.write("<hr><b></b></hr><br>");//etiqueta <hr></hr> genera una linea en la pagina (1,2y3 solo es para saber donde se
+			imprimir("Cálculo de promedio del imc de "+nombre1+" y "+nombre2+" es: "+imc);
+		}
+		function calcularIMC2(peso,altura){
+			imc=peso/(Math.pow(altura,2));//formula java Script de potencia(Math.pow(variable,exponente)			
+			return (imc);
+		}
+		function calcularIMC3(peso,altura){
+			return (peso/(Math.pow(altura,2)));//formula java Script de potencia(Math.pow(variable,exponente) return; retorna los valores captados	
+		}
+		calcularIMC(90.71,1.73,"Gustavo",50,1.69,"Monet");//Kg,Mts; imprime la leyenda "El Indice de masa corporal de " mas Monet  mas " es: " mas "imc" 
+		calcularIMC(50,1.69,"Monet",70.71,1.80,"Felipe");
+
+		document.write('<hr>Cálculo de promedio imc de DOS personas usando "return" :</hr><br>');
+		document.write("<hr><b></b></hr><br>");
+		var imc1 = calcularIMC2(70.71,1.80);//Felipe
+		var imc2 = calcularIMC2(50,1.69);//Monet
+		imprimir("Cálculo de promedio del imc de Felipe y Monet es: "+((imc1+imc2)/2));
+
+		document.write('<hr>Cálculo de promedio imc de DOS personas usando "return" dentro de una ecuacion simplificada :</hr><br>');
+		document.write("<hr><b></b></hr><br>");
+		imprimir("Cálculo de promedio del imc de Monet y Felipe es: "+((calcularIMC3(50,1.69)+calcularIMC3(70.71,1.80))/2));		
+</script>
