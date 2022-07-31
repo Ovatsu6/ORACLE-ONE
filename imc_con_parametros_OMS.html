@@ -1,0 +1,51 @@
+<meta charset="UTF-8">
+<h4>Cálculo de Indice de Masa Muscular</h4>
+<script>
+		function saltarLinea(argument) {
+			document.write("<br>");
+			document.write("<br>");
+			document.write("<br>");
+		}
+		function imprimir(frase) {
+			document.write(frase);
+      saltarLinea();      
+		}		
+		function calcularIMC(peso,altura){
+			return (peso/(Math.pow(altura,2)));
+		}
+		document.write('<hr>Cálculo de imc de UNA personas usando "return" dentro de una ecuacion simplificada :</hr><br>');
+		document.write("<hr><b></b></hr><br>");
+		var nombreInformado=prompt("informe su nombre: ");
+ 		pesoInformado=prompt(nombreInformado+" informe su peso: ");
+		alturaInformada=prompt(nombreInformado+" informe su altura: ");
+		imcCalculado=calcularIMC(pesoInformado,alturaInformada);
+		imprimir("Cálculo de imc de "+nombreInformado+" es: "+imcCalculado);
+		if(imcCalculado<18.5)
+		{
+			imprimir("Cálculo de imc de "+nombreInformado+" es: "+imcCalculado)+"en la clasificacion del IMC de OMS se encuentra en: Insuficiencia Ponderal";
+		}
+		if(imcCalculado>=18.5&&imcCalculado<=24.9)
+		{
+			imprimir("Cálculo de imc de "+nombreInformado+" es: "+imcCalculado+"en la clasificacion del IMC de OMS se encuentra en: Intervalo Normal");
+		}
+		if(imcCalculado==25)
+		{
+			imprimir("Cálculo de imc de "+nombreInformado+" es: "+imcCalculado+"en la clasificacion del IMC de OMS se encuentra en: Sobre Peso");
+		}
+		if(imcCalculado>25&&imcCalculado<=29.9)
+		{
+			imprimir("Cálculo de imc de "+nombreInformado+" es: "+imcCalculado+"en la clasificacion del IMC de OMS se encuentra en: PreObesidad");
+		}
+		if(imcCalculado>=30&&imcCalculado<=34.9)
+		{
+			imprimir("Cálculo de imc de "+nombreInformado+" es: "+imcCalculado+"en la clasificacion del IMC de OMS se encuentra en: Obesidad CLASE 01");
+		}
+		if(imcCalculado>=35&&imcCalculado<=39.9)
+		{
+			imprimir("Cálculo de imc de "+nombreInformado+" es: "+imcCalculado+"en la clasificacion del IMC de OMS se encuentra en: Obesidad CLASE 02");
+		}
+		if(imcCalculado>=40)
+		{
+			imprimir("Cálculo de imc de "+nombreInformado+" es: "+imcCalculado+"en la clasificacion del IMC de OMS se encuentra en: Obesidad CLASE 03");
+		}
+</script>
