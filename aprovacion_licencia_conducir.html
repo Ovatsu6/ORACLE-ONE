@@ -1,0 +1,30 @@
+<meta charset="UTF-8">
+<script>
+    function saltarLinea() {
+        document.write("<br>");
+    }
+
+    function imprimir(frase) {
+        document.write(frase);
+        saltarLinea();
+    }
+    var edad = parseInt(prompt("¿Cuál es tu edad?"));
+    ;
+    if (edad<18)
+    {
+    	imprimir("Aun no tienes la edad para poder manejar");
+    }
+    if (edad>=18)
+    {
+    	var nombre = prompt("introdusca su nombre: ")
+    	var tieneLicencia = prompt(nombre+" ¿Tienes licencia? Responde S o N")
+    	if (tieneLicencia=="S"||tieneLicencia=="s")
+    		{
+    			imprimir(nombre+", tienes "+edad+" años "+" ya estas preparado para conducir entonces, mucha suerte y sigue las indicaciones de transito");
+    		}
+    	if (tieneLicencia=="N"||tieneLicencia=="n")
+    		{
+    			imprimir(nombre+", tienes "+edad+" años "+" Sí aun no tienes licencia, te invitamos a que estudies la normativa de transito y busques una escuela examinadora para que puedas tener tú licencia");
+    		}
+    }
+</script>
