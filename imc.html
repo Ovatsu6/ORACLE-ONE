@@ -1,0 +1,53 @@
+<meta charset="UTF-8">
+<h4>Cálculo de Indice de Masa Muscular (IMC)</h4>
+<script>
+		function saltarLinea(argument) {
+			document.write("<br>");
+			document.write("<br>");
+			document.write("<br>");
+		}
+		function imprimir(frase) {//recibira la funcion "imprimir" una variable "frase"
+			document.write(frase);// entonces luego el codigo es leido dando como parametros de entrada el llamamiento de la funcion es decir como en el siguiente ejemplo "imprimir("hola amigos");" 
+			saltarLinea();//devolvera en texto estatico "hola amigos" seguido de 3 saltos de linea
+		}
+		function calcularIMC(peso,altura){
+			imc=peso/(Math.pow(altura,2));//formula java Script de potencia(Math.pow(variable,exponente)
+			return(imc);//retorna el valor calculado de la variable cuando entra en ejecucion la funcion
+		}
+		function calcularIMC2(peso,altura,nombre){
+			imc=peso/(Math.pow(altura,2));//formula java Script de potencia(Math.pow(variable,exponente)
+			document.write("<hr>calculo imc usando funciones dentro de funciones con valor directo</hr><br>");//etiqueta <hr></hr> genera una linea en la pagina
+			document.write("<hr><b></b></hr><br>");//etiqueta <hr></hr> genera una linea en la pagina (1,2y3 solo es para saber donde se
+			imprimir("El Indice de masa corporal de "+ nombre +" es: "+imc);
+		}
+		
+		document.write("<hr>calculo imc usando funciones</hr><br>");//etiqueta <hr></hr> genera una linea en la pagina
+		document.write("1<hr><b>2</b></hr>3<br>");//etiqueta <hr></hr> genera una linea en la pagina (1,2y3 solo es para saber donde se pociciona el texto)
+		peso=90.71;//Kg
+		altura=1.73;//Mts		
+		imc=calcularIMC(peso,altura);
+		imprimir("El Indice de masa corporal de Gustavo es: "+imc);
+
+		document.write("<hr>calculo imc sin usar funciones</hr><br>");
+		document.write("<hr></hr><br>");
+		pesoFelipe=70.71;//Kg
+		alturaFelipe=1.80;//Mts
+		imc=pesoFelipe/(Math.pow(alturaFelipe,2));//formula JavaScript de potencia(Math.pow(variable,exponente)
+		imprimir("El Indice de masa corporal de Felipe es: "+imc);
+
+		document.write("<hr>calculo imc usando funciones con variables diferentes a la declarada<br>el calculo del imc</hr><br>");
+		document.write("<hr><b></b></hr><br>");
+		pesoRamon=60.71;//Kg
+		alturaRamon=1.76;//Mts		
+		imc=calcularIMC(pesoRamon,alturaRamon);//se tiene que poner las variables en el orden en el cual seran enviadas para el calculo del imc
+		imprimir("El Indice de masa corporal de Ramón es: "+imc);
+
+		document.write("<hr>calculo imc usando funciones con valor directo</hr><br>");
+		document.write("<hr><b></b></hr><br>");
+		imc=calcularIMC(55,1.63);//Kg,Mts
+		imprimir("El Indice de masa corporal de Mariam es: "+imc);
+
+		calcularIMC2(50,1.69,"Monet");//Kg,Mts; imprime la leyenda "El Indice de masa corporal de " mas Monet  mas " es: " mas "imc" 
+
+		document.write("<br>"+imc);//toma el ultimo valor de la imc, calculada
+</script>
