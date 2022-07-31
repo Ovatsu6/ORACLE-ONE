@@ -1,0 +1,33 @@
+<meta charset="UTF-8">
+<h4>Juego de Adivinación</h4>
+<script>
+		function saltarLinea(argument) {
+			document.write("<br>");
+			document.write("<br>");
+			document.write("<br>");
+		}
+		function imprimir(frase) {
+			document.write(frase);
+			saltarLinea();
+		}		
+		function calcularIMC(peso,altura){
+			return (peso/(Math.pow(altura,2)));
+		}
+		var numeroPensado=Math.round(Math.random()*10);
+		var numeroLanzado=parseInt(prompt("Ingrese un numero entre cero y diez"));
+		if(numeroPensado==numeroLanzado)
+		{
+			imprimir('Usted acertó, el numero pensado '+numeroPensado+' es igual al número introducido: '+ numeroLanzado);
+		}
+		else//if(numeroPensado!=numeroLanzado)
+			{
+				if(numeroPensado>numeroLanzado)
+					{
+						imprimir('Usted erró, el numero pensado es: '+numeroPensado+' y este número es Mayor al número introducido: '+ numeroLanzado+' siga intentando adivinar el numero "RANDOM"');
+					}
+				if(numeroPensado<numeroLanzado)
+					{
+						imprimir('Usted erró, el numero pensado es: '+numeroPensado+' y este número es Menor al número introducido: '+ numeroLanzado+' siga intentando adivinar el numero "RANDOM"');
+					}
+			}
+</script>
