@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+<script>
+	function saltarLinea(argument) {
+		document.write("<br>");
+	}
+	function imprimir(frase) {
+		document.write(frase);
+		saltarLinea();
+	}	
+    var inicioDeSesionRegistrado = "alura";
+    var contrasenhaRegistrada = "alura321";
+	var contador=1
+	var intentos=3
+	while(contador<=intentos)
+		{
+			var inicioDeSesionIngresado = prompt("Ingrese su usuario");
+    		var contrasenhaIngresada = prompt("Ingrese su contraseña");
+			if( inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada ) 
+    			{
+        			alert("Bienvenido al sistema " + inicioDeSesionIngresado);
+        			break;
+    			} 
+    		else//if( inicioDeSesionRegistrado != inicioDeSesionIngresado && contrasenhaRegistrada != contrasenhaIngresada ) 
+    			{
+        			alert("inicio de sesión inválido. Favor intente de nuevo");
+
+    			}
+    		//document.write("hola"); para testear que el ciclo funcionaba
+    			contador++;
+		}
+		if( inicioDeSesionRegistrado == inicioDeSesionIngresado && contrasenhaRegistrada == contrasenhaIngresada ) 
+    			{
+        			imprimir("Bienvenido "+inicioDeSesionRegistrado+", ha hecho inicio de session correctamente");
+    			} 
+    	else//if( inicioDeSesionRegistrado != inicioDeSesionIngresado && contrasenhaRegistrada != contrasenhaIngresada ) 
+    			{
+        			imprimir("Lo sentimos pero ha sido bloqueada su IP por 24H y se mando una notificacion al usuario: "+inicioDeSesionRegistrado);
+    			}
+
+</script>
