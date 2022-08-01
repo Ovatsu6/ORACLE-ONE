@@ -1,0 +1,54 @@
+<meta charset="UTF-8">
+<h4>Juego de Adivinación</h4>
+<script>
+		function saltarLinea(argument) {
+			document.write("<br>");
+			document.write("<br>");
+			document.write("<br>");
+		}
+		function imprimir(frase) {
+			document.write(frase);
+			saltarLinea();
+		}		
+		function calcularIMC(peso,altura){
+			return (peso/(Math.pow(altura,2)));
+		}
+		var numeroPensado=Math.round(Math.random()*10);
+		
+		var contador=1
+		var intentos=3
+		while(contador<=intentos)
+		{
+			var numeroLanzado=parseInt(prompt("Ingrese un numero entre cero y diez"));
+			if(numeroPensado==numeroLanzado)
+			{
+
+				alert('Usted acertó, el numero pensado '+numeroPensado+' es igual al número introducido: '+ numeroLanzado+' lo logro en el  intento '+contador);
+				imprimir('Usted acertó, el numero pensado '+numeroPensado+' es igual al número introducido: '+ numeroLanzado+' lo logro en el intento '+contador);
+				break;
+			}
+			else//if(numeroPensado!=numeroLanzado)
+				{
+					if(numeroPensado>numeroLanzado)
+						{
+							alert('Usted erró, el numero pensado es mayor al número introducido: '+ numeroLanzado+' esta en el intento '+contador+' siga intentando adivinar el numero "RANDOM"');
+							imprimir('Usted erró, el numero pensado es mayor al número introducido: '+ numeroLanzado+' esta en el intento '+contador+' siga intentando adivinar el numero "RANDOM"');
+						}
+					if(numeroPensado<numeroLanzado)
+						{
+							alert('Usted erró, el numero pensado es menor al número introducido: '+ numeroLanzado+' esta en el intento '+contador+' siga intentando adivinar el numero "RANDOM"');
+							imprimir('Usted erró, el numero pensado es menor al número introducido: '+ numeroLanzado+' esta en el intento '+contador+' siga intentando adivinar el numero "RANDOM"');
+						}
+				}
+			contador++;
+			
+		}
+		if(numeroPensado==numeroLanzado)
+			{
+				//imprimir('el numero pensado es: '+numeroPensado+' numero de intentos '+(contador-1));
+			}
+		else
+			{
+				imprimir('Usted erró, el numero pensado era el: '+numeroPensado+' numero de intentos '+(contador-1));
+			}
+</script>
