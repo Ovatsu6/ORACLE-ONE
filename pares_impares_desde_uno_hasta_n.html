@@ -1,0 +1,42 @@
+<meta charset="UTF-8">
+<script>
+    var numFinal=parseInt(prompt("ingrese el valor tope que quiere evaluar"));//la variable debe iniciarce antes para que pueda aparecer el resultado en la leyenda
+    document.write('<h1>Todos los numeros pares hasta el: '+'"'+numFinal+'"'+ '</h1>');
+    function saltarLinea(argument) {
+            
+            document.write("<br>");
+            document.write("<br>");
+        }
+        function imprimir(frase) {
+            document.write(frase);
+            saltarLinea();
+        }
+    var numFin=numFinal//almaceno en una variable el valor de "numFinal"   
+    //imprimir("Calculo usando estructura WHILE");
+    var contador1=0//inicializo en cero para poder hacer incremento
+    var contador2=0//inicializo en cero para poder hacer incremento
+    var numPar=0//inicializo en cero para poder hacer sumatorias
+    var numImpar=0//inicializo en cero para poder hacer sumatorias
+    while(contador1<numFinal)
+        {
+            numPar=numPar+1
+            if(numPar%2==0)//si no hay residuo es par
+            {
+                imprimir(numPar);
+            }
+            contador1++;                     
+        }
+    imprimir("FIN_PAR");
+    document.write('<h1>Todos los numeros impares hasta el: '+'"'+numFin+'"'+ '</h1>');
+    //imprimir("Calculo usando estructura WHILE");
+        while(contador2<numFin)
+        {
+            numImpar=numImpar+1
+            if(numImpar%2!==0)//si hay residuo no es par
+            {
+                imprimir(numImpar);
+            }
+            contador2 = contador2 +1;                     
+        }
+    imprimir("FIN_IMPAR");
+</script>
