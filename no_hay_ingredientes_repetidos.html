@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+<h1>Recetas de Armando</h1>
+<script>
+    var captoIngredientes = [];
+    var cantidad = parseInt(prompt("¿Cuántos ingredientes vas a añadir?"));
+    document.write('la cantidad de ingredientes que hay son: "'+cantidad+'"<br><br>');
+    var contador = 1;
+    while( contador <= cantidad) {
+        var ingrediente = prompt("Informe el ingrediente " + contador);        
+        var encontrado=false;
+        for(var posicion=0; posicion<captoIngredientes.length; posicion++)
+            {
+            if (ingrediente==captoIngredientes[posicion]) 
+                {
+                    encontrado=true;
+                    break;
+                }
+            }
+        if(encontrado==false)
+            {
+            captoIngredientes.push(ingrediente);//envia el numero aleatorio al arreglo secretos
+            document.write("ingrediente numero: "+contador+" - "+ingrediente+"<br>");
+            contador++;
+            }
+    }
+    console.log(captoIngredientes);
+</script>
