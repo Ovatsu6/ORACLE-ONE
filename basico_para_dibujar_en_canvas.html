@@ -1,0 +1,34 @@
+<meta charset="utf-8">
+<canvas width="600" height="400">
+	
+</canvas>
+
+<script type="text/javascript">
+	var pantalla = document.querySelector("canvas");
+	//conecta las etiquetas de "HTML" con informacion o acciones que se desea realizar desde javaScript
+	var pincel = pantalla.getContext("2d");
+	//".getContext" manda a traer el contenido que tenga dentro una variable en este caso "pantalla" y esta estara en "dos dimencines"
+
+	pincel.fillStyle = "lightgrey";//es una propiedad del objeto pincel y se le está atribuyendo un color
+	pincel.fillRect(0,0,600,400);//es una función (método) del objeto pincel que dibuja un rectangulo
+	
+	pincel.fillStyle = "green";//es una propiedad del objeto pincel y se le está atribuyendo un color 
+	pincel.fillRect(0,0,200,400);//es una función (método) del objeto pincel que dibuja un rectangulo
+
+	pincel.fillStyle = "red";//es una propiedad del objeto pincel y se le está atribuyendo un color
+	pincel.fillRect(400,0,200,400);//es una función (método) del objeto pincel que dibuja un rectangulo
+
+	pincel.fillStyle = "yellow";//es una propiedad del objeto pincel y se le está atribuyendo un color
+	pincel.beginPath();//es una función (método) del objeto pincel que indica que comienza una nueva ruta de dibujo
+	pincel.moveTo(300,200);//es una función (método) del objeto pincel q indica q se mueva a una coordenada en especifico y se mantiene siempre en esta coordenada
+	pincel.lineTo(200,400);//es una función (método) del objeto pincel que indica que trace una linea desde 200 hasta 400 (triangulo)
+	pincel.lineTo(400,400);//es una función (método) del objeto pincel que indica que trace una linea desde 400 hasta 200 (triangulo)
+	pincel.fill();//es una función (método) del objeto pincel que llena del color definido el espacio del grafico que hemos hecho
+
+	pincel.fillStyle = "blue";//es una funcion que toma el valor de una propiedad 
+	pincel.beginPath();//es una función (método) del objeto pincel que indica que comienza una nueva ruta de dibujo
+	pincel.arc(300,200,50,0,2*3.14);//es una función (método) del objeto pincel que grafica circunferencias, los datos son:
+	//".arc(posicion inicial, posicion final ,tamaño del circulo,angulo inicial,dos pi es un circulo)"
+	//-->en este caso la coordenada de la posicion lo situa al centro
+	pincel.fill();//es una función (método) del objeto pincel que llena del color definido el espacio del grafico que hemos hecho
+</script>
