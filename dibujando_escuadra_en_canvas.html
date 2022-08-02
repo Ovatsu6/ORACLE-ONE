@@ -1,0 +1,21 @@
+<meta charset="utf-8">
+<canvas width="600" height="400">	
+</canvas>
+<script type="text/javascript">
+	var pantalla = document.querySelector("canvas");
+	//conecta las etiquetas de "HTML" con informacion o acciones que se desea realizar desde javaScript
+	var pincel = pantalla.getContext("2d");
+	//".getContext" manda a traer el contenido que tenga dentro una variable en este caso "pantalla" y esta estara en "dos dimencines"	
+	pincel.fillStyle = "black";//es una propiedad del objeto pincel y se le está atribuyendo un color 
+	pincel.beginPath();//es una función (método) del objeto pincel que indica que comienza una nueva ruta de dibujo
+	pincel.moveTo(50,50);//es una función (método) del objeto pincel q indica q se mueva a una coordenada en especifico y se mantiene siempre en esta coordenada
+	pincel.lineTo(50,400);//es una función (método) del objeto pincel que indica que trace una linea desde 200 hasta 400 (triangulo)
+	pincel.lineTo(400,400);//es una función (método) del objeto pincel que indica que trace una linea desde 400 hasta 200 (triangulo)
+	pincel.fill();//es una función (método) del objeto pincel que llena del color definido el espacio del grafico que hemos hecho
+	pincel.fillStyle = "white";//es una propiedad del objeto pincel y se le está atribuyendo un color 
+	pincel.beginPath();//es una función (método) del objeto pincel que indica que comienza una nueva ruta de dibujo
+	pincel.moveTo(100,175);//es una función (método) del objeto pincel q indica q se mueva a una coordenada en especifico y se mantiene siempre en esta coordenada
+	pincel.lineTo(100,350);//es una función (método) del objeto pincel que indica que trace una linea desde 200 hasta 400 (triangulo)
+	pincel.lineTo(270,350);//es una función (método) del objeto pincel que indica que trace una linea desde 400 hasta 200 (triangulo)
+	pincel.fill();//es una función (método) del objeto pincel que llena del color definido el espacio del grafico que hemos hecho	
+</script>
