@@ -1,0 +1,23 @@
+<meta charset="utf-8">
+<canvas width="600" height="400">	
+</canvas>
+<script type="text/javascript">
+	var pantalla = document.querySelector("canvas");
+	var pincel = pantalla.getContext("2d");
+
+	pincel.fillStyle="lightgrey";
+	pincel.fillRect(0,0,600,400);
+
+	pincel.fillStyle="green";//Cuadro de la fig. color verde
+	pincel.fillRect(0,0,50,50);//Primer cuadrado
+	pincel.fillRect(50,0,50,50);//Segundo cuadrado
+	//pincel.fillRect(0,0,50,25);//Primer cuadrado
+	//pincel.fillRect(0,25,50,50);//Segundo cuadrado
+				 //(x, y, b, a);
+	pincel.strokeStyle = "black";//Contorno de la fig. color negro
+	pincel.strokeRect(0,0,50,50);//Primer marco
+	pincel.strokeRect(50,0,50,50);//Segundo marco
+//asume las propiedades que anteriormente se han dado
+	pincel.fillRect(150,0,50,50);//Tercer cuadrado
+	pincel.strokeRect(150,0,50,50);//Tercer marco	
+</script>
