@@ -1,0 +1,37 @@
+<meta charset="utf-8">
+<canvas width="600" height="400">	
+</canvas>
+<script type="text/javascript">
+	var pantalla = document.querySelector("canvas");
+	var pincel = pantalla.getContext("2d");
+
+	pincel.fillStyle="lightgrey";
+	pincel.fillRect(0,0,600,400);
+
+	function exihibirAlerta(evento) 
+	{//funcion ".offset toma" todo lo sobrante de una variable
+		var x = evento.pageX - pantalla.offsetLeft;//".offsetLeft" toma el sobrante hacia la izquierda del objeto pantalla
+		var y = evento.pageY - pantalla.offsetTop;//".offsetTop" toma el sobrante hacia la arriba del objeto pantalla
+		console.log(evento);
+		alert("Usted ha hecho un clic en las coordenadas x= "+x+" y = "+y);
+	}
+	function dibujarCirculo(evento) 
+	{//funcion ".offset toma" todo lo sobrante de una variable
+		var x = evento.pageX - pantalla.offsetLeft;
+		var y = evento.pageY - pantalla.offsetTop;
+
+		pincel.fillStyle = "blue";//color azul del dibujo
+		pincel.beginPath();//funcion que indica inicio de dibujo
+		pincel.arc(x,y,10,0,2*3.14)//dibuja un circulo, 
+//tiene 5 parametros ("x","y","radio","angulo inicial","angulo final (2*3.14)")
+		pincel.fill();
+
+		console.log("x= "+x+" y = "+y);
+	}
+//pantalla es un objeto y onclink es una funcion, su funcion es al hacer clic, es decir si el usuario hace clic en el area del canvas 
+//onclic tomara ese evento y ejecutara la funcion "exihibirAlrta()"
+	
+	//pantalla.onclick = exihibirAlerta;
+	pantalla.onclick = dibujarCirculo;
+	//cuando la funcion que se declara es tomada como parametro de valor para una variable
+</script>
