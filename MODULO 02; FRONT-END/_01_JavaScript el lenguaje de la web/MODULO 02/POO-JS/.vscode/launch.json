@@ -1,0 +1,26 @@
+{
+    // Use IntelliSense para saber los atributos posibles.
+    // Mantenga el puntero para ver las descripciones de los existentes atributos.
+    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "9-lazos",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\9-lazos.js"
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "8-operadorlogicoencadenados",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\8-operadorlogicoencadenados.js"
+        }
+    ]
+}
