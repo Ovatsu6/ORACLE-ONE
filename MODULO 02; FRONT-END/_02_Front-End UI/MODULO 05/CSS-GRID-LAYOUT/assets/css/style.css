@@ -1,0 +1,34 @@
+.app {
+    background: #f1f1f1;
+    display: grid;  
+    font-family: Arial, Helvetica, sans-serif;
+    grid-template-areas: /*con el grid defines como seccionar las paginas en "grid" y luego defines las clases
+    que se veran afectadas para hacer el grid*/
+        "header"
+        "contenido"
+        "footer";
+    grid-template-columns: auto;/*tamaño total del navegador*/
+    grid-template-rows: 50px auto auto; 
+}
+
+.encabezado {
+    align-items: center;
+    display:flex;
+    grid-area: header;/*en esta parte es en donde se vinculan los grid definidos en la clase ".app"*/
+    padding: 0 2rem;
+    background: #f1f1f1;
+    
+}
+.contenido {
+    grid-area: contenido;/*en esta parte es en donde se vinculan los grid definidos en la clase ".app"*/
+    padding: 0 2rem;
+}
+
+.rodapie { 
+    background: #fdfdfd;
+    color: #333333;
+    grid-area: footer;/*en esta parte es en donde se vinculan los grid definidos en la clase ".app"*/
+    padding: 1rem;
+    text-align: center;
+    
+}
