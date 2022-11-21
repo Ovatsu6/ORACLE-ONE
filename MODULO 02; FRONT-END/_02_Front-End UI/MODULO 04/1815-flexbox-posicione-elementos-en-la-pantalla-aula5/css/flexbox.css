@@ -1,0 +1,132 @@
+.headerPrincipal .container {
+	display: flex;/*alinea el contenedor en forma de pila(columna); un elemento encima de otro elemente)*/
+	align-items: center;/*alinea al centro la relacion entre objetos*/
+	justify-content: space-between;/*justifica en coontenido dentro del contenedor en relacion al espacio que existe entre los elementos*/
+}
+
+.headerPrincipal-nav {
+	display: flex;/*alinea el nav en forma de fila de un elemento a la par de otro elemente)*/
+}
+
+.rodapePrincipal-patrocinadores .container {
+	display: flex;/*alinea el contenedor en forma de pila(columna; un elemento encima de otro elemente)*/
+	justify-content: space-between/*justifica en coontenido dentro del contenedor en relacion al espacio que existe entre los elementos*/
+}
+
+.rodapePrincipal-patrocinadores-list {
+	display: flex;/*alinea el contenedor en forma de pila(columna); un elemento encima de otro elemente)*/
+	align-items: center;/*alinea al centro la relacion entre objetos*/
+	justify-content: space-around;/*justifica en coontenido alrededor del contenedor en relacion al espacio que existe entre los elementos*/
+	width: 70%;
+	margin-right: 5%;
+}
+
+.rodapePrincipal-contatoForm {
+	width: 25%;
+}
+
+.rodapePrincipal-contatoForm-fieldset {
+	display: flex;
+}
+
+.rodapePrincipal-navMap-list {
+	display: flex;
+  /*flex-direction: column; alinea en forma de pila vertical los elementos al usar el display flex*/
+	flex-flow: column wrap;/*cuando llega a 250px, comenzara a rellenar el espacio hacia la derecha
+	en forma de columnasy sin el column por deficion hace lo mismo pero en fila */
+	height: 250px;
+}
+
+.contenidoPrincipal-cursos {
+	display: flex;
+	flex-wrap: wrap;/*cuando llega a 250px, comenzara a rellenar el espacio hacia la derecha
+	en forma de filas y sin el column por deficion hace lo mismo pero en fila */
+}
+
+.contenidoPrincipal-cursos-link {
+	width: 23%;
+	margin: 1%;
+}
+
+.contenidoPrincipal-cursos-link:nth-child(4n) {
+	margin-right: 0;
+}
+
+.contenidoPrincipal-cursos-link:nth-child(4n+1) {
+	margin-left: 0;
+}
+
+.videoSobre .container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.videoSobre-sobre {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 10;
+}
+
+.videoSobre-sobre-list {
+	flex-grow: 1;
+}
+
+.videoSobre-video {
+	flex-grow: 1;
+}
+
+/* Responsive */
+@media(max-width: 768px) {
+	.headerPrincipal-nav {
+		flex-direction: column;
+	}
+
+	.headerPrincipal .container {
+		flex-direction: column;
+		align-items: initial;
+		text-align: center;
+	}
+
+	.contenidoPrincipal-cursos {
+		flex-direction: column;
+	}
+
+	.contenidoPrincipal-cursos-link {
+		width: 100%;
+	}
+
+	.rodapePrincipal-navMap-list {
+		height: auto;
+	}
+
+	.rodapePrincipal-patrocinadores .container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.rodapePrincipal-patrocinadores-list {
+		margin: 0;
+		width: 100%;
+	}
+
+	.rodapePrincipal-contatoForm {
+		width: 100%;
+	}
+
+	.rodapePrincipal-contatoForm-fieldset {
+		justify-content: center;
+	}
+
+	.headerPrincipal-nav-link-app {
+		order: -1;
+	}
+
+	.videoSobre .container {
+		flex-direction: column;
+	}
+
+	.videoSobre-video {
+		margin: 0 auto;
+	}
+}

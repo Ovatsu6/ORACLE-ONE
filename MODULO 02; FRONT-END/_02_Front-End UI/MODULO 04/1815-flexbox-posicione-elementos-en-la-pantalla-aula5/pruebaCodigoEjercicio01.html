@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<header class="encabezado">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+        <a class="logo" href="#">
+          <img src="img/logo.png">
+        </a>
+      
+        <ul class="menu">
+          <li class="menu-item">Item 1 del menu</li>
+          <li class="menu-item">Item 2 del menu</li>
+          <li class="menu-item">Item 3 del menu</li>
+          <li class="menu-item">Item 4 del menu</li>
+        </ul>
+</head>
+<body>
+    
+</body>
+<!--Hemos visto en el primer ejercicio de esta clase que podemos dar espacios entre los 
+    elementos que tienen en padre con la propiedad display:flex de manera fácil.-->
+    <style>
+        .menu-item {
+            margin: 0 0 0 70px;/*la respuesta seria asignandole margenes*/
+        }
+
+        .encabezado {
+            display: flex;
+            /*alinea el contenedor en forma de pila(columna; un elemento encima de otro elemente)*/
+            align-items: center;
+            justify-content: space-between;
+            /*justifica en coontenido dentro del contenedor en relacion al espacio que existe entre los elementos*/
+        }
+
+        .menu {
+            display: flex;
+            /*alinea el nav en forma de fila de un elemento a la par de otro elemente)*/
+        }
+    </style>
+</html>
+
+
+
