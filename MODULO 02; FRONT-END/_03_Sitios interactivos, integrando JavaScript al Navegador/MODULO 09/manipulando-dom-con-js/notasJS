@@ -1,0 +1,14 @@
+ const btn = document.querySelector('[data-form-btn]');
+
+ console.log(btn);
+
+ //selecciona btn
+ btn
+ 
+ //necesitamos que el btn sea escuchado "osea un listener"
+ click//hace un evento, --arrastrar algun elemento de la pagina, usuario presiona teclas--
+
+ //accion que se va a ejecutar cuando el usuario realice el evento
+ btn.addEventListener("click",function name(params) {
+    console.log("crea la tarea");
+ });
